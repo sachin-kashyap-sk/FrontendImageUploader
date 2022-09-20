@@ -14,8 +14,11 @@ export const ImageUpload = () => {
       if (data.statusCode === 201) {
         alert("File uploaded successfully!");
         window.location.reload();
+      } else {
+        alert(data);
       }
     } catch (err) {
+      console.log(err);
       alert("Something went wrong while uploading image");
     }
   };
